@@ -1,1 +1,4 @@
-/target
+/target/
+/result/
+/Cargo.lock
+/blog/
