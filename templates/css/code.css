@@ -1,9 +1,13 @@
 @font-face {
-    font-family:firacode;
-    src:url('firacode.eot');
-    src:local('firacode'),
-    url('../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.eot') format('embedded-opentype'),
-    url('../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.woff') format('woff'),
-    url('../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.ttf') format('truetype'),
-    url('../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.svg') format('svg');
+  font-family: firacode;
+  src: url("firacode.eot");
+  src: local("firacode"),
+    url("../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.eot")
+      format("embedded-opentype"),
+    url("../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.woff")
+      format("woff"),
+    url("../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.ttf")
+      format("truetype"),
+    url("../fonts/english/FiraCode/Fira-Code-Regular-Nerd-Font-Complete.svg")
+      format("svg");
 }

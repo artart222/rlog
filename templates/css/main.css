@@ -1,20 +1,21 @@
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-	margin-right: auto;
-	margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 
   background-color: rgb(30, 33, 39);
 }
 
-
 p {
-  font-family:bnazanin;
+  font-family: bnazanin;
 }
 code {
   font-family: firacode;
 }
-p, code {
+p,
+code {
   font-size: 1.3em;
 
   font-style: normal;
@@ -23,10 +24,13 @@ p, code {
   color: rgb(171, 178, 191);
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-  text-align:center;
-  direction:rtl;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
   color: rgb(209, 154, 102);
 }
 h1 {
@@ -38,8 +42,6 @@ h2 {
 h3 {
   font-size: 2em;
 }
-
-
 
 .main {
   display: block;
@@ -73,7 +75,7 @@ h3 {
 }
 
 .content-desc h2 {
-  text-align:center;
+  text-align: center;
   font-size: 3.7em;
 
   color: rgb(209, 154, 102);
