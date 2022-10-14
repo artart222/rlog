@@ -9,7 +9,7 @@ body {
 }
 
 p {
-  font-family: bnazanin;
+  font-family: Arial;
 }
 code {
   font-family: firacode;
@@ -57,6 +57,72 @@ h3 {
   .main {
     width: 80%;
   }
+}
+
+.header {
+  height: 7%;
+  width: 100%;
+
+  display: block;
+  background-color: rgb(30, 33, 39);
+}
+
+.logo-header {
+  height: 100%;
+  width: 15%;
+
+  display: block;
+  float: left;
+}
+.logo-container {
+  display: table;
+  height: 100%;
+  float: left;
+}
+.logo-container a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.navigation-header {
+  height: 100%;
+  width: 85%;
+
+  display: block;
+  float: right;
+}
+.links-container {
+  display: table;
+  height: 100%;
+  float: right;
+}
+.links-container a {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+  font-size: 1.57em;
+}
+@media screen and (max-width: 780px) {
+  .links-container a {
+    font-size: 1.1em;
+  }
+}
+
+a:link,
+a:visited {
+  color: rgb(68, 0, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(68, 0, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .content-desc {
