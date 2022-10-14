@@ -1,0 +1,26 @@
+header = [
+  [
+    "https://github.com/artart222",
+    "~/GitHub-Mark-64px.png",
+  ],
+  [
+    "https://www.youtube.com/channel/UCQSDE-p625gJdNmKLYGSqKA/featured",
+    "~/programming/web-development/personal-website/images/Youtube/youtube64x.png",
+  ],
+]
+
+home = [
+  [
+    "Hi, My name is Artin Mobasher. I'm 16 years old programmer from Iran. I make videos about different topics such as gaming and tech for example about vim/NeoVim or programming or Linux tricks.In my free times I works on my programming projects just for fun aspect of it and I play video games and write for this blog.",
+  ],
+
+  [
+    "I like working with NeoVim(I don't know why) so again just for fun I made IDE written in lua for NeoVim. You can find it [here](https://github.com/artart222/CodeArt)",
+    "/home/artin/programming/rust/rlog/blog/images/vim/vim-screenshot.png",
+  ],
+
+  [
+    "You can view [all of my works](https://github.com/artart222/) in github",
+    "/home/artin/programming/rust/rlog/blog/images/GitHub/GitHub-main-page.png",
+  ],
+]
