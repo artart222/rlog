@@ -3,9 +3,32 @@ name = "rlog"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[net]
+git-fetch-with-cli = true
 
 [dependencies]
 pulldown-cmark = "0.8.0"
 walkdir = "2.3.2"
 fs_extra = "1.2.0"
+toml = "0.5.9"
+serde = "1.0"
+serde_derive = "1.0.136"
+dirs = "4.0.0"
+maud = "*"
+
+[profile.release]
+# Enable link-time optimization, eliminates more code and inlines across crate boundaries.
+lto = true
+# codegen-units of 1 gives best optimization, but disables parallel building.
+codegen-units = 1
+# Includes debug information in release builds.
+debug = false
+# Set optimization level to 3 this will give you most optimized executable but you have compiling process.
+opt-level = 3
+
+[profile.dev]
+# For more info about these settings you can check profile.release
+lto = false
+codegen-units = 16
+debug = true
+opt-level = 0
