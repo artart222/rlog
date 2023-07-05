@@ -56,26 +56,32 @@ fn create_result_directory() {
         .expect("Cannot copy templates to result directory");
 
     // Iterating over items in ./blog unrecursively.
-    for path in std::fs::read_dir("./blog").unwrap() {
-        let path = path.unwrap();
-        println!(
-            "Moving {} to result directory.",
-            path.path().display().to_string()
-        );
-        // Moving items to result directory based on being a file or directory.
-        if path.metadata().unwrap().is_dir() {
-            let options = fs_extra::dir::CopyOptions::new();
-            fs_extra::dir::copy(path.path().display().to_string(), "./result", &options)
+    if std::fs::read_dir(".blog").is_ok() {
+        for path in std::fs::read_dir("./blog").unwrap() {
+            let path = path.unwrap();
+            println!(
+                "Moving {} to result directory.",
+                path.path().display().to_string()
+            );
+            // Moving items to result directory based on being a file or directory.
+            if path.metadata().unwrap().is_dir() {
+                let options = fs_extra::dir::CopyOptions::new();
+                fs_extra::dir::copy(path.path().display().to_string(), "./result", &options)
+                    .expect(
+                        &format!("Cannot copy {}", path.path().display().to_string()).to_string(),
+                    );
+            } else {
+                let options = fs_extra::file::CopyOptions::new();
+                fs_extra::file::copy(
+                    path.path().display().to_string(),
+                    format!("./result/{}", path.file_name().to_str().unwrap()),
+                    &options,
+                )
                 .expect(&format!("Cannot copy {}", path.path().display().to_string()).to_string());
-        } else {
-            let options = fs_extra::file::CopyOptions::new();
-            fs_extra::file::copy(
-                path.path().display().to_string(),
-                format!("./result/{}", path.file_name().to_str().unwrap()),
-                &options,
-            )
-            .expect(&format!("Cannot copy {}", path.path().display().to_string()).to_string());
+            }
         }
+    } else {
+        println!("Can't read/open 'blog' directory");
     }
 }
 
